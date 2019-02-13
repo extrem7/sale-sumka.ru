@@ -1,0 +1,143 @@
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-bottom: 50px;
+}
+
+.post-type-archive {
+  .products {
+    border-top: 1px solid #ece9e9;
+  }
+}
+
+.product-card {
+  text-align: center;
+  padding: 0;
+  &:hover {
+    .photo {
+      img {
+        .scale(1.1);
+      }
+    }
+  }
+  .photo {
+    height: 180px;
+    .flex-center();
+    .box-shadow(0 1px 0 rgba(147, 140, 152, 0.2));
+    img {
+      max-height: 60%;
+      transition: transform .3s;
+    }
+  }
+  .product-block {
+    min-height: 150px;
+    transition: background-color .3s;
+    &:hover {
+      background-color: #d8d2d2;
+      .box-shadow(0 3px 18px 2px rgba(147, 140, 152, 0.2));
+    }
+  }
+  .product-actions {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: -25px;
+    a {
+      .size(50px)!important;
+      .flex-center();
+      .border-radius(50%);
+      background-color: white;
+      margin: 0 15px!important;
+      border: 1px solid @pink;
+      font-size: 18px!important;
+      color: @gray;
+      &:hover {
+        color: @red;
+      }
+    }
+  }
+  .title {
+    font-size: 15px;
+    text-transform: uppercase;
+    font-family: "IBM Plex Serif";
+    font-weight: 600;
+    margin-top: -15px;
+  }
+  .excerpt {
+    font-size: 13px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    color: #a6a1a3;
+  }
+  .price {
+    font-family: "IBM Plex Serif";
+    font-size: 15px;
+    font-weight: 600;
+    .woocommerce-Price-currencySymbol {
+      font-size: 11px;
+    }
+  }
+  &-sale {
+    .photo {
+      .box-shadow(0 1px 0 rgba(147, 140, 152, 0.2));
+      height: 230px;
+      img {
+        max-height: 90%;
+      }
+    }
+    .product-block {
+      min-height: 170px;
+    }
+    .title {
+      font-size: 19px;
+    }
+    .excerpt {
+      font-size: 16px;
+      margin-bottom: 25px;
+    }
+    .price {
+      font-size: 19px;
+      span {
+        font-size: 15px;
+      }
+    }
+  }
+}
+
+.woocommerce-pagination {
+  font-family: "IBM Plex Serif";
+  font-weight: 100;
+  margin: 60px 0;
+  ul {
+    display: flex;
+    .page-numbers {
+      width: 30px;
+      max-height: 30px;
+      padding: 4px 0;
+      .flex-center();
+      text-align: center;
+      display: block;
+      background-color: #f7f6f6;
+      color: #5d5759;
+      &:hover, &.current {
+        background-color: #d8d2d2;
+      }
+    }
+    .prev, .next {
+      background-color: #d8d2d2;
+      &:hover {
+        background-color: @brown;
+        color: white;
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .woocommerce-pagination {
+    ul {
+      justify-content: center;
+    }
+  }
+}

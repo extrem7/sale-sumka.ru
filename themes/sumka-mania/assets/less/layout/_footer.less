@@ -1,0 +1,153 @@
+.footer {
+  background-color: #211e1f;
+  font-family: Montserrat;
+  font-size: 13px;
+  .delivery {
+    border-bottom: 1px solid #302e2e;
+    padding: 30px 0 25px;
+    .container {
+      position: relative;
+    }
+    p {
+      color: #ce5a5a;
+      display: flex;
+      align-items: center;
+      i {
+        .size(15px);
+        min-width: 15px;
+        .border-radius(50%);
+        .flex-center();
+        font-size: 7px;
+        margin-right: 10px;
+        border: 1px solid @red
+      }
+    }
+    .scroll-up {
+      .size(50px);
+      .border-radius(50%);
+      .flex-center();
+      font-size: 25px;
+      border: 1px solid @pink;
+      background-color: #ffffff;
+      color: @gray;
+      position: absolute;
+      right: 0;
+      bottom: -50px;
+      transition: all .3s;
+      cursor: pointer;
+      &:hover {
+        color: @red;
+        border-color: @red;
+      }
+    }
+  }
+  &-block {
+    color: #ffffff;
+    padding: 50px 0 60px;
+    .title {
+      font-weight: 700;
+      margin-bottom: 10px;
+      color: white;
+    }
+    p {
+      color: #a7a7a7;
+    }
+    a {
+      color: #a7a7a7;
+      &:hover {
+        color: @red;
+      }
+    }
+    ul {
+      li {
+        margin-bottom: 6px;
+      }
+    }
+    .categories {
+      font-family: "IBM Plex Serif";
+      font-size: 15px;
+    }
+    .payment {
+      font-weight: 700;
+      a {
+        color: white;
+        &:hover {
+          color: @red;
+        }
+      }
+    }
+  }
+  .social {
+    margin-top: 40px;
+    a {
+      .size(25px);
+      .border-radius(50%);
+      .flex-center();
+      font-size: 12px;
+      background-color: @gray;
+      color: #211e1f;
+      margin-right: 5px;
+      &:hover {
+        background-color: lighten(@brown-light, 80%);
+      }
+    }
+  }
+  .copyright {
+    background-color: #fafafa;
+    padding: 35px 0;
+    .name {
+      color: @black;
+      font-weight: 700;
+      margin-right: 300px;
+    }
+    .views {
+      color: #666666;
+      b {
+        margin-right: 20px;
+      }
+    }
+  }
+  @media (max-width: 991px) {
+    .copyright {
+      .name {
+        margin-right: 100px;
+      }
+    }
+  }
+  @media (max-width: 768px) {
+    .delivery {
+      .scroll-up {
+        right: 15px;
+      }
+    }
+
+    &-block {
+      width: 33%;
+      padding-top: 0;
+      &.info-block {
+        padding-top: 35px;
+        width: 100%;
+      }
+    }
+
+    .copyright {
+      .name {
+        margin-right: 25px;
+        .fit-content();
+      }
+    }
+  }
+  @media (max-width: 576px) {
+    .social{
+      justify-content: center;
+    }
+    &-block {
+      width: 100%;
+      padding-bottom: 25px;
+      text-align: center;
+      li{
+        text-align: center;
+      }
+    }
+  }
+}

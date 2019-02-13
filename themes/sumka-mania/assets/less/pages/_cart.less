@@ -1,0 +1,306 @@
+.woocommerce-cart-form {
+  margin: 40px 0 0;
+  .woocommerce-message{
+    margin-bottom: 0;
+  }
+  .table {
+  //  margin: 40px 0 0;
+  }
+  th, td {
+    border: 1px solid white;
+  }
+  th {
+    background-color: #eeeaea;
+    color: #aaa8a8;
+    font-size: 13px;
+    height: 50px;
+    padding: 30px 20px 30px 40px;
+    font-weight: 400;
+  }
+  .cart_item,.wishlist_item {
+    background-color: #eeeaea;
+    td {
+      padding: 30px 30px 30px 40px;
+    }
+  }
+  .product-thumbnail {
+    img {
+      max-width: 100px;
+      max-height: 100px;
+      margin-right: 30px;
+    }
+  }
+  .title {
+    color: @brown;
+    font-family: "IBM Plex Serif";
+    font-weight: 600;
+    padding-top: 10px;
+    font-size: 17px;
+  }
+  .excerpt {
+    margin-bottom: 20px;
+  }
+  .excerpt, .articulus {
+    font-size: 13px;
+    color: #a39c9e;
+  }
+  .product-quantity {
+    width: 170px;
+  }
+  .quantity {
+    font-size: 16px;
+    font-weight: 500;
+    display: flex;
+    input {
+      color: #969093;
+      font-size: 13px;
+      .size(47px, 23px);
+      text-align: center;
+      .hide-number-arrows();
+      pointer-events: none;
+      font-weight: 500;
+    }
+    button {
+      .size(23px);
+      border: none;
+      background-color: @brown;
+      .flex-center();
+      display: inline-flex;
+      outline: none;
+      cursor: pointer;
+      padding: 0;
+      svg, i {
+        font-size: 10px;
+        color: #ffffff;
+        &::selection {
+          background: transparent;
+        }
+        &::-moz-selection {
+          background: transparent;
+        }
+        &.plus {
+          .border-radius(0 5px 5px 0);
+          background-color: #e8e8e8;
+        }
+      }
+    }
+  }
+  .product-price {
+    font-family: "IBM Plex Serif";
+    font-size: 19px;
+    font-weight: 600;
+    .woocommerce-Price-currencySymbol {
+      font-size: 15px;
+      margin-left: 9px;
+      display: inline-block;
+    }
+  }
+  .product-remove button{
+    cursor: pointer;
+  }
+  .product-action a{
+    .button();
+    margin-top: 15px;
+    display: block;
+    min-width: 150px;
+    .border-radius(26px);
+    border: 1px solid @red;
+    background-color: #e3e3e3;
+    text-transform: uppercase;
+    color: @red;
+    padding: 14px 15px;
+    transition: background .3s;
+    &:hover {
+      background-color: darken(#e3e3e3, 4%);
+    }
+  }
+}
+
+.actions {
+  width: 100%;
+  padding-top: 30px;
+  padding-left: 20px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid #eae9ea;
+  .delete-all {
+    border: none;
+    background: transparent;
+    color: @red;
+    font-family: "IBM Plex Serif";
+    font-weight: 600;
+    margin-bottom: 22px;
+    margin-left: 20px;
+    cursor: pointer;
+  }
+  .back-shop {
+    font-family: "IBM Plex Serif";
+    font-weight: 600;
+    color: #969093;
+    display: block;
+    i {
+      display: inline-block;
+      margin-right: 10px;
+    }
+  }
+}
+
+.subtotals {
+  color: #969093;
+  padding-right: 40px;
+  li {
+    width: 340px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .price {
+      color: @brown;
+    }
+  }
+  .total {
+    padding-top: 10px;
+    margin-bottom: 0;
+    font-family: "IBM Plex Serif";
+    font-weight: 600;
+    color: @brown;
+    .price {
+      font-size: 19px;
+      font-weight: 500;
+    }
+  }
+}
+
+.checkout {
+  border-top: 1px solid #eae9ea;
+  padding-top: 30px;
+  padding-bottom: 70px;
+  label {
+    color: #969093;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 20px;
+    .star-required {
+      color: @red-light;
+      display: inline-block;
+      margin-right: 5px;
+    }
+  }
+  input {
+    .size(378px, 40px);
+    .border-radius(20px);
+    border: 1px solid rgba(185, 185, 185, 0.5);
+    margin-left: 20px;
+    padding-left: 25px;
+    color: #666666;
+    font-weight: 300;
+  }
+  .submit {
+    margin-left: 20px;
+    border: none;
+    min-width: 190px;
+    padding: 14px 15px;
+    .border-radius(25px);
+    background-color: @red;
+    color: #ffffff;
+    font-family: "IBM Plex Serif";
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color .2s;
+    &:hover {
+      background-color: darken(@red, 8%);
+    }
+  }
+}
+
+.cart-empty{
+  padding-top: 45px;
+  text-align: center;
+}
+
+.wc-backward{
+  .button();
+  margin-top: 15px;
+  display: block;
+  min-width: 150px;
+  .border-radius(26px);
+  border: 1px solid @red;
+  background-color: #e3e3e3;
+  text-transform: uppercase;
+  color: @red;
+  padding: 14px 15px;
+  transition: background .3s;
+  &:hover {
+    background-color: darken(#e3e3e3, 4%);
+  }
+}
+
+.tinv-wishlist .product-thumbnail{
+  width: unset;
+  min-width: unset;
+}
+
+@media (max-width: 991px) {
+  .checkout {
+    .submit {
+      margin-left: 0;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .woocommerce-cart-form {
+    table {
+      thead {
+        display: none;
+      }
+      tr {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .cart_item {
+        td {
+          width: 50%;
+          &:first-child {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  .subtotals {
+    li {
+      width: 260px;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .woocommerce-cart-form {
+    table {
+      .cart_item {
+        td {
+          padding: 15px;
+        }
+      }
+    }
+  }
+
+  .subtotals {
+    margin-top: 20px;
+    li {
+      width: 100%;
+    }
+  }
+
+  .checkout {
+    label {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    input {
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,140 @@
+.banner {
+  min-height: 500px;
+  background: url('../img/banner.png') no-repeat center;
+  background-size: cover;
+  padding-top: 100px;
+  font-family: "IBM Plex Serif";
+  .title {
+    font-size: 70px;
+    font-weight: 300;
+    font-style: italic;
+    position: relative;
+    &:before {
+      content: '';
+      .size(55px);
+      background: url("../img/sale-label.png");
+      position: absolute;
+      left: -50px;
+      bottom: -50px;
+    }
+  }
+  .nds {
+    font-weight: 300;
+    font-style: italic;
+    margin-left: 210px;
+    color: white;
+  }
+  p {
+    margin-bottom: 35px;
+    font-size: 30px;
+    font-weight: 300;
+    line-height: 40px;
+    b {
+      font-weight: 700;
+    }
+  }
+
+  @media (max-width: 576px) {
+    min-height: 350px;
+    .title {
+      font-size: 50px;
+      &:before {
+        left: -30px;
+      }
+    }
+
+    .nds {
+      margin: 0;
+      text-align: right;
+      width: 100%;
+      font-size: 18px;
+      display: block;
+    }
+
+    p {
+      font-size: 24px;
+    }
+  }
+}
+
+.advantages {
+  margin-top: -85px;
+}
+
+.nav-tabs {
+  width: 100%;
+  flex-wrap: nowrap;
+  border: none;
+  li {
+    width: 100%;
+  }
+  a {
+    width: 100%;
+    padding: 40px 0 45px 20px;
+    font-size: 19px;
+    text-transform: uppercase;
+    display: block;
+    &.active {
+      background-color: @brown;
+      color: white;
+    }
+  }
+  @media (max-width: 991px) {
+    a {
+      font-size: 16px;
+      padding-left: 0;
+      text-align: center;
+    }
+  }
+  @media (max-width: 768px) {
+    flex-wrap: wrap;
+    justify-content: space-around;
+    li {
+      width: unset;
+    }
+
+    a {
+      padding: 20px 15px;
+    }
+  }
+}
+
+.banner-sale {
+  min-height: 320px;
+  background: url('../img/banner-sale.png') no-repeat center;
+  background-size: cover;
+  padding-top: 50px;
+  padding-left: 50px;
+  font-family: "IBM Plex Serif";
+  .title {
+    font-size: 59px;
+    color: @brown-light;
+    font-weight: 300;
+    text-transform: uppercase;
+    margin-bottom: 35px;
+  }
+  .button {
+    display: inline-block;
+    min-width: 150px;
+    .border-radius(26px);
+    border: 1px solid @red;
+    background-color: #e3e3e3;
+    text-transform: uppercase;
+    color: @red;
+    padding: 14px 0;
+    &:hover {
+      background-color: darken(#e3e3e3, 4%);
+    }
+  }
+  @media (max-width: 768px) {
+    padding: 50px 15px;
+    .title {
+      font-size: 42px;
+    }
+  }
+  @media (max-width: 576px) {
+    .title {
+      font-size: 30px;
+    }
+  }
+}

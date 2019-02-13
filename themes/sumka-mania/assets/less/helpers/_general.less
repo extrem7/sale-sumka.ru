@@ -1,0 +1,125 @@
+.section-title {
+  padding: 35px 0 50px;
+  font-family: "IBM Plex Serif";
+  font-size: 40px;
+  font-weight: 100;
+}
+
+.advantages-background {
+  background: url("../img/advantages-background.png") no-repeat center;
+  background-size: cover;
+  background-position-x: -850px;
+}
+
+.advantages {
+  .box-shadow(1px -7px 10px rgba(64, 57, 60, 0.08));
+  background-color: white;
+  .advantage {
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+    color: #bab6b7;
+    line-height: 15px;
+    img {
+      margin-right: 10px;
+    }
+  }
+  .search-form {
+    height: 100px;
+    background-color: #d8d2d2;
+    .flex-center();
+    input {
+      .size(176px, 33px);
+      font-size: 12px;
+      font-family: "IBM Plex Serif";
+      padding-left: 12px;
+    }
+    button {
+      .size(33px);
+      background-color: @brown;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    .aws-container .aws-search-form {
+      height: unset !important;
+      .aws-loader {
+        right: 40px !important;
+      }
+      .aws-wrapper {
+        display: flex;
+      }
+    }
+  }
+  @media (max-width: 991px) {
+    .advantage {
+      font-size: 11px;
+    }
+
+    .search-form {
+      input {
+        width: 140px;
+      }
+    }
+  }
+  @media (max-width: 776px) {
+    padding: 30px 15px;
+    .search-form {
+      display: none;
+    }
+  }
+  @media (max-width: 576px) {
+    padding: 25px 15px;
+    .advantage {
+      justify-content: center;
+      margin: 0 0 15px;
+    }
+  }
+}
+
+.page-404 {
+  display: flex;
+  justify-content: center;
+  background: url("https://www.imj.org.il/sites/default/files/404.jpg") no-repeat center;
+  background-size: cover;
+  min-height: 70vh;
+}
+
+.typography {
+  padding: 50px 40px;
+  p {
+    color: #9c9597;
+  }
+  h2, h3, h4, h5, h6 {
+    color: @brown-light;
+    font-family: "IBM Plex Serif";
+    font-weight: 600;
+  }
+  h2 {
+    font-size: 23px;
+  }
+  h3 {
+    font-size: 21px;
+  }
+  h4 {
+    font-size: 19px;
+  }
+  h5 {
+    font-size: 16px;
+  }
+
+  h6 {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 576px) {
+  .section-title {
+    text-align: center;
+  }
+
+  .advantages {
+    display: none;
+  }
+}
+
